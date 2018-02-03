@@ -1,9 +1,8 @@
 version: 2
 jobs:
   build:
-    working_directory: /usr/src/app
     docker:
-      - image: banian/node
+      - image: circleci/python:3.5-node
     steps:
       # Checkout repository
       - checkout
@@ -20,7 +19,7 @@ jobs:
       # Install dependencies
       - run:
           name: Install Python Dependencies
-          command: pip install -r requirements.txt
+          command: pip install --user -r requirements.txt
 
       # Keep cache
       - save_cache:

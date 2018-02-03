@@ -9,7 +9,7 @@
     }
   ],
   "main": "lib/module.js",
-  "repository": "https://github.com/https://github.com/nuxt-community/python-module",
+  "repository": "https://github.com/nuxt-community/python-module",
   "publishConfig": {
     "access": "public"
   },

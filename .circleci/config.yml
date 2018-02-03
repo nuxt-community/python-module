@@ -11,6 +11,10 @@ jobs:
       - restore_cache:
           key: yarn-{{ checksum "yarn.lock" }}
 
+      - run: 
+          name: Alter path
+          command: echo 'export PATH=/home/circleci/.local/bin:$PATH' >> $BASH_ENV
+
       # Install dependencies
       - run:
           name: Install Dependencies

@@ -1,9 +1,9 @@
 # @nuxtjs/python
 [![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/python/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/python)
 [![npm](https://img.shields.io/npm/dt/@nuxtjs/python.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/python)
-[![CircleCI](https://img.shields.io/circleci/project/github/https://github.com/nuxt-community/python-module.svg?style=flat-square)](https://circleci.com/gh/https://github.com/nuxt-community/python-module)
-[![Codecov](https://img.shields.io/codecov/c/github/https://github.com/nuxt-community/python-module.svg?style=flat-square)](https://codecov.io/gh/https://github.com/nuxt-community/python-module)
-[![Dependencies](https://david-dm.org/https://github.com/nuxt-community/python-module/status.svg?style=flat-square)](https://david-dm.org/https://github.com/nuxt-community/python-module)
+[![CircleCI](https://img.shields.io/circleci/project/nuxt-community/python-module.svg?style=flat-square)](https://circleci.com/gh/nuxt-community/python-module)
+[![Codecov](https://img.shields.io/codecov/c/github/nuxt-community/python-module.svg?style=flat-square)](https://codecov.io/gh/nuxt-community/python-module)
+[![Dependencies](https://david-dm.org/nuxt-community/python-module/status.svg?style=flat-square)](https://david-dm.org/nuxt-community/python-module)
 [![js-standard-style](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
 
 > Write Nuxt.js Apps in Python
@@ -12,7 +12,7 @@
 
 ## Features
 
-- Write Nuxt.js applications without using Python!
+- Write Nuxt.js applications using Python!
 - Currently only supports custom Javascripthon but in the future other compilers will also be expected to work.
 
 ## Setup

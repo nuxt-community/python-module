@@ -35,7 +35,7 @@ class Component:
 
       self['data'] = lambda: {
         'name': 'Nuxt.js + Python',
-        'description': 'Build Nuxt.js applications using python!'
+        'description': 'Build Nuxt.js applications using Python!'
       }
 
       self['methods'] = {

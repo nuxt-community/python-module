@@ -1,0 +1,1 @@
+-e git+https://gitlab.com/metapensiero/metapensiero.pj.git#egg=javascripthon

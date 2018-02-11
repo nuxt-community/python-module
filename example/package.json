@@ -1,0 +1,14 @@
+{
+  "name": "nuxt-python",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nuxt dev",
+    "start": "nuxt start",
+    "build": "nuxt build",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "latest",
+    "@nuxtjs/python": "latest"
+  }
+}

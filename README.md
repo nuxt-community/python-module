@@ -71,7 +71,7 @@ def increment(state):
     state.counter = state.counter + 1
 
 def createStore():
-    return Vuex.Store(
+    return Store(
       state={'counter': 0},
       mutations={'increment': increment}
     )

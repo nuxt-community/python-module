@@ -1,7 +1,7 @@
 const { Nuxt, Builder } = require('nuxt')
 const request = require('request-promise-native')
 
-const config = require('./fixture/nuxt.config')
+const config = require('../example/nuxt.config')
 
 const url = path => `http://localhost:3000${path}`
 const get = path => request(url(path))
@@ -21,6 +21,6 @@ describe('basic', () => {
 
   test('render', async () => {
     let html = await get('/')
-    expect(html).toContain('Works!')
+    expect(html).toContain('Nuxt.js + Python')
   })
 })

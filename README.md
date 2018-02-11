@@ -39,20 +39,22 @@
 ## Usage
 
 ### Using `.vue` files
+
 **TIP** If you use Vim you can get the full experience with https://github.com/posva/vim-vue/pull/97
 
 `hello.vue`:
+
 ```html
 <template>
   <div>
       Nuxt {{ best_lang }}
   </div>
 </template>
+
 <script lang="py?compiler=pj">
 class Component:
-
-    def __init__(self):
-        self['data'] = lambda: { 'best_lang': 'Python' }
+  def __init__(self):
+      self['data'] = lambda: { 'best_lang': 'Python' }
 
 __default__ = Component()
 </script>
@@ -61,29 +63,32 @@ __default__ = Component()
 ### Using `.py` files for other nuxt files
 
 `store/index.py`
-```python
-from vuex import Vuex
 
+```python
+from vuex import Store
 
 def increment(state):
     state.counter = state.counter + 1
 
-
 def createStore():
-    return Vuex.Store(state={'counter': 0},
-                      mutations={'increment': increment})
-
+    return Vuex.Store(
+      state={'counter': 0},
+      mutations={'increment': increment}
+    )
 
 __default__ = createStore
 ```
 
 `pages/counter.vue`
+
 ```html
 <template>
   <h2>{{ $store.state.counter }}</h2>
   <button @click="$store.commit('increment')">+1</button>
 </template>
 ```
+
+👉 For a working example, see [here](./example).
 
 ## Development
 

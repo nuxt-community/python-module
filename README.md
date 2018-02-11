@@ -28,7 +28,9 @@
 }
 ```
 
-- Install a Python transpiler (e.g. `pip install --user -r requirements.txt`)
+- Install the [Javascripthon](https://gitlab.com/metapensiero/metapensiero.pj) Python transpiler (for now **you'll need the development version** e.g. `pip install -r requirements.txt`).
+
+- Note that Javascripthon requires that you have **Python 3.5** (or better).
 
 ## Usage
 
@@ -48,10 +50,9 @@ class Component:
     def __init__(self):
         self['data'] = lambda: { 'best_lang': 'Python' }
 
-__all__ = Component()
+__default__ = Component()
 </script>
 ```
-Note: This syntax requires a specific branch of Javascripthon until patches get merged https://github.com/icarito/metapensiero.pj/tree/default_import - see alternative with `require` at https://github.com/martim00/python-webpack-loader/pull/8#issuecomment-359280782
 
 ### Using `.py` files for other nuxt files
 
@@ -69,7 +70,7 @@ def createStore():
                       mutations={'increment': increment})
 
 
-__all__ = createStore
+__default__ = createStore
 ```
 
 `pages/counter.vue`
@@ -83,7 +84,7 @@ __all__ = createStore
 ## Development
 
 - Clone this repository
-- Install dependnecies using `yarn install` or `npm install`
+- Install dependencies using `yarn install` or `npm install`
 - Start development server using `npm run dev`
 
 ## License
@@ -91,3 +92,5 @@ __all__ = createStore
 [MIT License](./LICENSE)
 
 Copyright (c) Sebastian Silva <sebastian@fuentelibre.org>
+
+This module was started from the [module-template](https://github.com/nuxt-community/module-template) by Pooya Parsa and relies heavily on [python-webpack-loader](https://github.com/martim00/python-webpack-loader) by Martim Nascimento and [Javascripthon](https://gitlab.com/metapensiero/metapensiero.pj) by Alberto Berti.

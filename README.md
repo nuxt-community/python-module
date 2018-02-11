@@ -32,6 +32,10 @@
 
 - Note that Javascripthon requires that you have **Python 3.5** (or better).
 
+- In Vue files, Mark your script tags like this: `<script lang="py?compiler=pj">`.
+
+- Please note syntax [conversions](https://gitlab.com/metapensiero/metapensiero.pj#import-statements).
+
 ## Usage
 
 ### Using `.vue` files

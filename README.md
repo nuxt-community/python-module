@@ -15,6 +15,17 @@
 - Write Nuxt.js applications using Python!
 - Currently only supports custom Javascripthon but in the future other compilers will also be expected to work.
 
+## Try the example
+
+1. Clone this repository and change directory into it
+2. Install dependencies:
+    ```
+    npm install                         # or use yarn
+
+    pip install -r requirements.txt
+    ```
+3. Run example: `npm run dev`
+
 ## Setup
 - Add `@nuxtjs/python` dependency using yarn or npm to your project
 - Add `@nuxtjs/python` to `modules` section of `nuxt.config.js`
@@ -28,7 +39,10 @@
 }
 ```
 
-- Install the [Javascripthon](https://gitlab.com/metapensiero/metapensiero.pj) Python transpiler (for now **you'll need the development version** e.g. `pip install -r requirements.txt`).
+- Install the [Javascripthon](https://gitlab.com/metapensiero/metapensiero.pj) Python transpiler. For now **you'll need the master branch** e.g:
+    ```
+    pip install -e git+https://gitlab.com/metapensiero/metapensiero.pj#egg=javascripthon
+    ```
 
 - Note that Javascripthon requires that you have **Python 3.5** (or better).
 

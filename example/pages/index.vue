@@ -25,7 +25,7 @@
   </section>
 </template>
 
-<script lang="py?compiler=pj">
+<script lang="py">
 from ..components.PythonLogo import __default__ as PythonLogo
 from ..components.NuxtLogo import __default__ as NuxtLogo
 

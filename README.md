@@ -26,18 +26,26 @@
     ```
 3. Run example: `npm run dev`
 
-## Setup
+## Setup in your own project
+
 - Add `@nuxtjs/python` dependency using yarn or npm to your project
 - Add `@nuxtjs/python` to `modules` section of `nuxt.config.js`
+  ```js
+  {
+    modules: [
+      '@nuxtjs/python'
+    ],
+    python: {
+      compiler: 'pj'   // default
+    }
+  }
+  ```
+- In Vue files, Mark your script tags like this: `<script lang="py">`.
+- You may pass options to py-loader (currently it supports `compiler` parameter)
 
-```js
-{
-  modules: [
-    // Simple usage
-    '@nuxtjs/python'
- ]
-}
-```
+## Choice of Python to Javascript compiler
+
+Compiler default and recommended is **Javascripthon** but it is possible to use other compilers (see below).
 
 - Install the [Javascripthon](https://gitlab.com/metapensiero/metapensiero.pj) Python transpiler. For now **you'll need the master branch** e.g:
     ```
@@ -46,15 +54,17 @@
 
 - Note that Javascripthon requires that you have **Python 3.5** (or better).
 
-- In Vue files, Mark your script tags like this: `<script lang="py?compiler=pj">`.
+- Javascripthon supports converting Python import statements to ES6 imports as used in Nuxt. Please note syntax [conversions](https://gitlab.com/metapensiero/metapensiero.pj#import-statements).
 
-- Please note syntax [conversions](https://gitlab.com/metapensiero/metapensiero.pj#import-statements).
+- You can pass a `compiler` option to py-loader by using module options or in a `python` section in your `nuxt.config.js` file.
+
+- `Transcrypt` has its own module system so in order to use it, you can use the CommonJS module standard (`require` to import and `module.exports`) and it should work. See the `py-loader` [Vuejs example](https://github.com/martim00/python-webpack-loader/blob/master/examples/vue-demo/src/App.vue).
 
 ## Usage
 
 ### Using `.vue` files
 
-**TIP** If you use Vim you can get the full experience with https://github.com/posva/vim-vue/pull/97
+**TIP** If you use Vim you can get syntax highlighting for HTML, CSS *and* Python by installing [vim-vue](https://github.com/posva/vim-vue) plugin and applying [this patch](https://github.com/posva/vim-vue/pull/97).
 
 `hello.vue`:
 
@@ -65,7 +75,7 @@
   </div>
 </template>
 
-<script lang="py?compiler=pj">
+<script lang="py">
 class Component:
   def __init__(self):
       self['data'] = lambda: { 'best_lang': 'Python' }

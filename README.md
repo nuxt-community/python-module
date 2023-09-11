@@ -12,7 +12,7 @@
 
 ## Features
 
-- Write Nuxt.js applications using Python!
+- Write Nuxt 2 applications using Python!
 - Currently only supports custom Javascripthon but in the future other compilers will also be expected to work.
 
 ## Try the example

@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.5-node
+      - image: circleci/python:3.10-node
     steps:
       # Checkout repository
       - checkout

@@ -1,3 +1,6 @@
+> [!NOTE]
+> This repository is archived. `@nuxtjs/python` was built for Nuxt 2, which reached end of life on June 30, 2024.
+
 # @nuxtjs/python
 [![npm (scoped with tag)](https://img.shields.io/npm/v/@nuxtjs/python/latest.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/python)
 [![npm](https://img.shields.io/npm/dt/@nuxtjs/python.svg?style=flat-square)](https://npmjs.com/package/@nuxtjs/python)
